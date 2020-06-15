@@ -39,7 +39,12 @@ public class Controller : MonoBehaviour
     //加工ボタン追加
     void InitButton(int num, GameObject instanedButton)
     {
+        String pass = "Splites/" + (ProcessType)num;
+        int a = 1;
         instanedButton.GetComponent<Button>().onClick.AddListener(() => ProcessOnClick((ProcessType)num));
+        Texture2D texture = Resources.Load(pass) as Texture2D;
+        instanedButton.GetComponentInChildren<Image>().sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+        Debug.Log("/Splites/" + (ProcessType)num + ".jpg");
         instanedButton.GetComponentInChildren<Text>().text = ((ProcessType)num).ToString();
     }
 

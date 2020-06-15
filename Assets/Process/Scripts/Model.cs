@@ -40,7 +40,7 @@ public enum ProcessType
     /// </summary>
     Thresh,
     /// <summary>
-    /// 2値化
+    /// エッジ検出
     /// </summary>
     Edge,
     /// <summary>
